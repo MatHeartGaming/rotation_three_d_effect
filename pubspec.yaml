@@ -1,7 +1,7 @@
 name: rotation_three_d_effect
 description: "A new Flutter package project."
 version: 0.0.1
-homepage:
+homepage: "https://github.com/MatHeartGaming/rotation_three_d_effect"
 
 environment:
   sdk: '>=3.2.3 <4.0.0'
