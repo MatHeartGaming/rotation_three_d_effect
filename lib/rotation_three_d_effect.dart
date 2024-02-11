@@ -6,29 +6,29 @@ class ThreeDimensionalWidget extends StatefulWidget {
   final bool returnsInPlace;
   final Duration? returnInPlaceDuration;
 
-  const ThreeDimensionalWidget.limitedReturnsInPlace(
-      {super.key,
-      required this.child,
-      this.maximumPan = 50,
-      this.returnsInPlace = true,
-      this.returnInPlaceDuration = const Duration(milliseconds: 400),
-    });
+  const ThreeDimensionalWidget.limitedReturnsInPlace({
+    super.key,
+    required this.child,
+    this.maximumPan = 50,
+    this.returnsInPlace = true,
+    this.returnInPlaceDuration = const Duration(milliseconds: 400),
+  });
 
-  const ThreeDimensionalWidget.limited(
-      {super.key,
-      required this.child,
-      this.maximumPan = 50,
-      this.returnsInPlace = false,
-      this.returnInPlaceDuration,
-    });
+  const ThreeDimensionalWidget.limited({
+    super.key,
+    required this.child,
+    this.maximumPan = 50,
+    this.returnsInPlace = false,
+    this.returnInPlaceDuration,
+  });
 
-  const ThreeDimensionalWidget(
-      {super.key,
-      required this.child,
-      this.maximumPan,
-      this.returnsInPlace = false,
-      this.returnInPlaceDuration,
-    });
+  const ThreeDimensionalWidget({
+    super.key,
+    required this.child,
+    this.maximumPan,
+    this.returnsInPlace = false,
+    this.returnInPlaceDuration,
+  });
 
   @override
   State<ThreeDimensionalWidget> createState() => _ThreeDimensionalWidgetState();
