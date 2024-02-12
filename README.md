@@ -37,6 +37,7 @@ ThreeDimensionalWidget.limitedReturnsInPlace(
   ),
 )
 ```
+![Rotating Text](https://github.com/MatHeartGaming/readme_images/raw/main/rotating_text.gif)
 
 b) Limited Rotation (No Return in Place):
 ```
@@ -48,6 +49,7 @@ ThreeDimensionalWidget.limited(
   ),
 )
 ```
+![Rotating Tonal Button](https://github.com/MatHeartGaming/readme_images/raw/main/rotating_tonal_button.gif)
 
 c) Full 3D Rotation:
 ```
@@ -57,7 +59,7 @@ ThreeDimensionalWidget(
   ),
 )
 ```
-![Flutter Logo Rotating](https://github.com/MatHeartGaming/readme_images/blob/main/flutter_logo_rotating.gif)
+![Flutter Logo Rotating](https://github.com/MatHeartGaming/readme_images/raw/main/flutter_logo_rotating.gif)
 
 d) Full Custom:
 ```
@@ -77,6 +79,7 @@ ThreeDimensionalWidget(
     ),
 )
 ```
+![Flutter Logo Rotating](https://github.com/MatHeartGaming/readme_images/raw/main/rotating_card.gif)
 
 This widget allows limited rotation with a return to the original position.
 
