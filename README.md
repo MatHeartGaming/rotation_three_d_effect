@@ -23,7 +23,9 @@ dependencies:
 ## Usage
 
 1. Import the package:
+```
 import 'package:rotation_three_d_effect/rotation_three_d_effect.dart';
+```
 
 2. Apply 3D Rotation Effect:
 a) Limited Returns In Place:
@@ -55,6 +57,7 @@ ThreeDimensionalWidget(
   ),
 )
 ```
+![Flutter Logo Rotating](https://github.com/MatHeartGaming/readme_images/blob/main/flutter_logo_rotating.gif)
 
 d) Full Custom:
 ```
@@ -78,4 +81,5 @@ ThreeDimensionalWidget(
 This widget allows limited rotation with a return to the original position.
 
 
-## Additional information
+## Important Notice
+This project is still in development, bugs may be present and I encourage you to report them. New features are under development and will be coming in the next weeks.

@@ -1,27 +1,38 @@
 import 'package:flutter/material.dart';
 
+/// This Widget allows to simply rotate other widgets.
+/// [child] is the Widget to which the rotation will be applied to.
+/// [maximumPan] is the maximum rotation on all axes (x, y, z)
+/// [returnsInPlace] indicates whether the widget will return the original position (0, 0, 0)
+/// [returnInPlaceDuration] is the duration of the returnsInPlace animation
 class ThreeDimensionalWidget extends StatefulWidget {
   final Widget child;
   final double? maximumPan;
   final bool returnsInPlace;
   final Duration returnInPlaceDuration;
 
+  /// This applies a limited rotation indicated by [maximumPan] and always retruns in place
+  /// [returnInPlaceDuration] the duration of the returnsInPlace animation
   const ThreeDimensionalWidget.limitedReturnsInPlace({
     super.key,
     required this.child,
     this.maximumPan = 50,
-    this.returnsInPlace = true,
     this.returnInPlaceDuration = const Duration(milliseconds: 400),
-  });
+  }) : returnsInPlace = true;
 
+  /// This applies a limited rotation indicated by [maximumPan] and never retruns in place
+  /// Takes in a [child] Widget
   const ThreeDimensionalWidget.limited({
     super.key,
     required this.child,
     this.maximumPan = 50,
-    this.returnsInPlace = false,
-    this.returnInPlaceDuration = const Duration(milliseconds: 0),
-  });
+  })  : returnsInPlace = false,
+        returnInPlaceDuration = const Duration(milliseconds: 0);
 
+  /// This applies a limited rotation indicated by [maximumPan]
+  /// Takes in a [child] Widget
+  /// [returnsInPlace] tells whether the widget should return to its original position when the user lift their finger.
+  /// [returnInPlaceDuration] the duration of the returnsInPlace animation
   const ThreeDimensionalWidget({
     super.key,
     required this.child,
