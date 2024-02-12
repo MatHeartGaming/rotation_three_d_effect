@@ -1,4 +1,5 @@
 ## [0.1.2] - Added example and some documentation
+* Added example
 * Added gifs to the README.md
 
 ## [0.1.1] - Added example and some documentation
