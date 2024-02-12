@@ -1,6 +1,6 @@
 name: rotation_three_d_effect
 description: "A Flutter package that allows to apply a Three Dimensional roatation to any widget, also allowing the user to rotate it as they whish."
-version: 0.1.0
+version: 0.1.1
 homepage: "https://github.com/MatHeartGaming/rotation_three_d_effect"
 
 environment:

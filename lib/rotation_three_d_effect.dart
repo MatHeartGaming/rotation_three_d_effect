@@ -4,7 +4,7 @@ class ThreeDimensionalWidget extends StatefulWidget {
   final Widget child;
   final double? maximumPan;
   final bool returnsInPlace;
-  final Duration? returnInPlaceDuration;
+  final Duration returnInPlaceDuration;
 
   const ThreeDimensionalWidget.limitedReturnsInPlace({
     super.key,
@@ -19,7 +19,7 @@ class ThreeDimensionalWidget extends StatefulWidget {
     required this.child,
     this.maximumPan = 50,
     this.returnsInPlace = false,
-    this.returnInPlaceDuration,
+    this.returnInPlaceDuration = const Duration(milliseconds: 0),
   });
 
   const ThreeDimensionalWidget({
@@ -27,7 +27,7 @@ class ThreeDimensionalWidget extends StatefulWidget {
     required this.child,
     this.maximumPan,
     this.returnsInPlace = false,
-    this.returnInPlaceDuration,
+    this.returnInPlaceDuration = const Duration(milliseconds: 0),
   });
 
   @override
