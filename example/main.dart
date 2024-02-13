@@ -16,7 +16,7 @@ class MainApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const ThreeDimensionalWidget.limitedReturnsInPlace(
+              const Rotation3DEffect.limitedReturnsInPlace(
                   child: Text(
                 'Hello 3D Rotation! \n(Returns in place)',
                 style: TextStyle(fontSize: 35),
@@ -24,7 +24,7 @@ class MainApp extends StatelessWidget {
               const SizedBox(
                 height: 50,
               ),
-              ThreeDimensionalWidget.limited(
+              Rotation3DEffect.limited(
                 maximumPan: 80,
                 child: FilledButton.tonal(
                     onPressed: () {},
@@ -35,7 +35,7 @@ class MainApp extends StatelessWidget {
                 height: 50,
               ),
               const Text("Unrestriced 3D Rotation"),
-              const ThreeDimensionalWidget(
+              const Rotation3DEffect(
                   child: FlutterLogo(
                 size: 150,
               )),
@@ -44,7 +44,7 @@ class MainApp extends StatelessWidget {
                 height: 50,
               ),
 
-              ThreeDimensionalWidget(
+              Rotation3DEffect(
                 maximumPan: 30,
                 returnsInPlace: true,
                 returnInPlaceDuration: const Duration(seconds: 1),

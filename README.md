@@ -13,12 +13,14 @@ and the Flutter guide for
 
 # Rotation 3D Effect
 
-A Flutter package that allows to apply a Three Dimensional Rotation to any widget, also allowing the user to rotate it as they whish.
+A Flutter package inspired by SwiftUI's rotation3DEffect that allows to apply a Three Dimensional Rotation to any widget, also allowing the user to rotate it as they whish.
 
 ## Installation
 Add the following line to your pubspec.yaml file:
+```
 dependencies:
-  rotation_three_d_effect: ^0.1.1
+  rotation_three_d_effect: ^0.1.3
+```
 
 ## Usage
 
@@ -30,7 +32,7 @@ import 'package:rotation_three_d_effect/rotation_three_d_effect.dart';
 2. Apply 3D Rotation Effect:
 a) Limited Returns In Place:
 ```
-ThreeDimensionalWidget.limitedReturnsInPlace(
+Rotation3DEffect.limitedReturnsInPlace(
   child: Text(
     'Hello 3D Rotation! \n(Returns in place)',
     style: TextStyle(fontSize: 35),
@@ -41,7 +43,7 @@ ThreeDimensionalWidget.limitedReturnsInPlace(
 
 b) Limited Rotation (No Return in Place):
 ```
-ThreeDimensionalWidget.limited(
+Rotation3DEffect.limited(
   maximumPan: 80,
   child: FilledButton.tonal(
     onPressed: () {},
@@ -53,7 +55,7 @@ ThreeDimensionalWidget.limited(
 
 c) Full 3D Rotation:
 ```
-ThreeDimensionalWidget(
+Rotation3DEffect(
   child: FlutterLogo(
     size: 150,
   ),
@@ -63,7 +65,7 @@ ThreeDimensionalWidget(
 
 d) Full Custom:
 ```
-ThreeDimensionalWidget(
+Rotation3DEffect(
     maximumPan: 20,
     returnsInPlace: true,
     returnInPlaceDuration: const Duration(seconds: 2),

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 /// [maximumPan] is the maximum rotation on all axes (x, y, z)
 /// [returnsInPlace] indicates whether the widget will return the original position (0, 0, 0)
 /// [returnInPlaceDuration] is the duration of the returnsInPlace animation
-class ThreeDimensionalWidget extends StatefulWidget {
+class Rotation3DEffect extends StatefulWidget {
   final Widget child;
   final double? maximumPan;
   final bool returnsInPlace;
@@ -13,7 +13,7 @@ class ThreeDimensionalWidget extends StatefulWidget {
 
   /// This applies a limited rotation indicated by [maximumPan] and always retruns in place
   /// [returnInPlaceDuration] the duration of the returnsInPlace animation
-  const ThreeDimensionalWidget.limitedReturnsInPlace({
+  const Rotation3DEffect.limitedReturnsInPlace({
     super.key,
     required this.child,
     this.maximumPan = 50,
@@ -22,7 +22,7 @@ class ThreeDimensionalWidget extends StatefulWidget {
 
   /// This applies a limited rotation indicated by [maximumPan] and never retruns in place
   /// Takes in a [child] Widget
-  const ThreeDimensionalWidget.limited({
+  const Rotation3DEffect.limited({
     super.key,
     required this.child,
     this.maximumPan = 50,
@@ -33,7 +33,7 @@ class ThreeDimensionalWidget extends StatefulWidget {
   /// Takes in a [child] Widget
   /// [returnsInPlace] tells whether the widget should return to its original position when the user lift their finger.
   /// [returnInPlaceDuration] the duration of the returnsInPlace animation
-  const ThreeDimensionalWidget({
+  const Rotation3DEffect({
     super.key,
     required this.child,
     this.maximumPan,
@@ -42,10 +42,10 @@ class ThreeDimensionalWidget extends StatefulWidget {
   });
 
   @override
-  State<ThreeDimensionalWidget> createState() => _ThreeDimensionalWidgetState();
+  State<Rotation3DEffect> createState() => _Rotation3DEffectState();
 }
 
-class _ThreeDimensionalWidgetState extends State<ThreeDimensionalWidget>
+class _Rotation3DEffectState extends State<Rotation3DEffect>
     with SingleTickerProviderStateMixin {
   Offset _offset = Offset.zero;
   final Offset _originalOffset = Offset.zero;

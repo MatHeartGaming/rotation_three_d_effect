@@ -1,3 +1,6 @@
+## [0.1.3] - Changed Widget name to a more concise one
+* Changed name from ThreeDimensionalWidget to Rotation3DEffect
+
 ## [0.1.2] - Added example and some documentation
 * Added example
 * Added gifs to the README.md
