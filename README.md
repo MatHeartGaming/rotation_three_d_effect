@@ -13,13 +13,13 @@ and the Flutter guide for
 
 # Rotation 3D Effect
 
-A Flutter package inspired by SwiftUI's rotation3DEffect that allows to apply a Three Dimensional Rotation to any widget, also allowing the user to rotate it as they whish.
+A Flutter package inspired by SwiftUI's rotation3DEffect that allows to apply a Three Dimensional rotation to any Widget.
 
 ## Installation
 Add the following line to your pubspec.yaml file:
 ```
 dependencies:
-  rotation_three_d_effect: ^0.1.3
+  rotation_three_d_effect: ^0.2.1
 ```
 
 ## Usage
@@ -83,7 +83,29 @@ Rotation3DEffect(
 ```
 ![Flutter Logo Rotating](https://github.com/MatHeartGaming/readme_images/raw/main/rotating_card.gif)
 
-This widget allows limited rotation with a return to the original position.
+e) Full Custom with Initial and End Offset of your chosing:
+```
+ Rotation3DEffect(
+  maximumPan: 90,
+  returnsInPlace: true,
+  returnInPlaceDuration: const Duration(milliseconds: 200),
+  initalPosition: const Offset(45, 90),
+  endPosition: const Offset(45, 90),
+  child: const Card(
+    elevation: 6,
+    color: Colors.green,
+    shadowColor: Colors.black,
+    child: SizedBox(
+      height: 160,
+      width: 300,
+      child: Center(
+          child: Text(
+              "Rotating Card\nInitial and end pos:\nx: 45, y: 90")),
+    ),
+  ),
+)
+```
+![Flutter Logo Rotating](https://github.com/MatHeartGaming/readme_images/raw/main/rotating_card_inital_end_offsets.gif)
 
 
 ## Important Notice

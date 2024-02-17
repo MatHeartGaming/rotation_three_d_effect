@@ -1,3 +1,7 @@
+## [0.2.1] - Inital and End Position
+* Added initial and end position for the child Widget to be placed. End position only works when returnsInPlace is set to true.
+* Added the possibility to make the child Widget rotate indefintely. This is still under development though, and I DO NOT recommend using it at this stage.
+
 ## [0.1.3] - Changed Widget name to a more concise one
 * Changed name from ThreeDimensionalWidget to Rotation3DEffect
 
