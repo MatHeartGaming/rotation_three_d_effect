@@ -19,7 +19,7 @@ A Flutter package inspired by SwiftUI's rotation3DEffect that allows to apply a 
 Add the following line to your pubspec.yaml file:
 ```
 dependencies:
-  rotation_three_d_effect: ^0.3.0
+  rotation_three_d_effect: ^0.3.1
 ```
 
 ## Usage
@@ -30,6 +30,25 @@ import 'package:rotation_three_d_effect/rotation_three_d_effect.dart';
 ```
 
 2. Apply 3D Rotation Effect:
+
+** NEW Indefinite Rotation:
+```
+IndefiniteRotation3DEffect(
+  rotateY: true,
+  rotateX: false,
+  rotationCount: 10,
+  allowUserRotation: true,
+  rotationDuration: const Duration(seconds: 5),
+  child: FilledButton.tonal(
+    onPressed: () {},
+    child: const Text(
+      "Indefinite Continous Rotation",
+    ),
+  ),
+);
+```
+![Indefinite Rotatation Effect](https://github.com/MatHeartGaming/readme_images/raw/main/indefinite_3d_rotation.gif)
+
 a) Limited Returns In Place:
 ```
 Rotation3DEffect.limitedReturnsInPlace(

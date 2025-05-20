@@ -1,3 +1,11 @@
+## [0.3.1] - Added IndefiniteRotation3DEffect to allow for Infinite widget rotations!
+* Readme update
+* It is now possible to make any widget to roate indefinetly
+* Possibility to choose speed of rotations
+* Choose the axis on which the Indefinite Rotation should work (x and/or y)
+* Optioanlly set number of rotations
+* Option to allow the user to interact while the widget rotates
+
 ## [0.3.0] - Added IndefiniteRotation3DEffect to allow for Infinite widget rotations!
 * It is now possible to make any widget to roate indefinetly
 * Possibility to choose speed of rotations
