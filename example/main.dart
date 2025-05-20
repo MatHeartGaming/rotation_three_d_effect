@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rotation_three_d_effect/indefinite_rotation_three_d_effect.dart';
 import 'package:rotation_three_d_effect/rotation_three_d_effect.dart';
 
 void main() {
@@ -18,34 +19,42 @@ class MainApp extends StatelessWidget {
           child: Center(
             child: SingleChildScrollView(
               child: Column(
+                spacing: 50,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Rotation3DEffect.limitedReturnsInPlace(
-                      child: const Text(
-                    'Hello 3D Rotation! \n(Returns in place)',
-                    style: TextStyle(fontSize: 35),
-                  )),
                   const SizedBox(
-                    height: 50,
+                    height: 20,
+                  ),
+                  IndefiniteRotation3DEffect(
+                    rotateY: true,
+                    rotateX: false,
+                    rotationCount: 10,
+                    allowUserRotation: true,
+                    rotationDuration: const Duration(seconds: 5),
+                    child: FilledButton.tonal(
+                      onPressed: () {},
+                      child: const Text(
+                        "Indefinite Continous Rotation",
+                      ),
+                    ),
+                  ),
+                  Rotation3DEffect.limitedReturnsInPlace(
+                    child: const Text(
+                      'Hello 3D Rotation! \n(Returns in place)',
+                      style: TextStyle(fontSize: 35),
+                    ),
                   ),
                   Rotation3DEffect.limited(
                     maximumPan: 80,
                     child: FilledButton.tonal(
-                        onPressed: () {},
-                        child: const Text(
-                            "Limited 3D Rotation (No return in place)")),
-                  ),
-                  const SizedBox(
-                    height: 50,
+                      onPressed: () {},
+                      child: const Text(
+                        "Limited 3D Rotation (No return in place)",
+                      ),
+                    ),
                   ),
                   const Text("Unrestriced 3D Rotation"),
-                  Rotation3DEffect(
-                      child: const FlutterLogo(
-                    size: 150,
-                  )),
-                  const SizedBox(
-                    height: 50,
-                  ),
+                  Rotation3DEffect(child: const FlutterLogo(size: 150)),
                   Rotation3DEffect(
                     maximumPan: 90,
                     returnsInPlace: true,
@@ -61,15 +70,14 @@ class MainApp extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 50),
                   Rotation3DEffect.limitedReturnsInPlace(
-                      initalPosition: const Offset(21, 50),
-                      child: const Text(
-                        '3D Rotation with\nWith inital offset! \n(Returns in place)',
-                        style: TextStyle(fontSize: 25),
-                        textAlign: TextAlign.center,
-                      )),
-                  const SizedBox(height: 50),
+                    initalPosition: const Offset(21, 50),
+                    child: const Text(
+                      '3D Rotation with\nWith inital offset! \n(Returns in place)',
+                      style: TextStyle(fontSize: 25),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
                   Rotation3DEffect(
                     maximumPan: 90,
                     returnsInPlace: true,
@@ -84,8 +92,10 @@ class MainApp extends StatelessWidget {
                         height: 160,
                         width: 300,
                         child: Center(
-                            child: Text(
-                                "Rotating Card\nInitial and end pos:\nx: 45, y: 90")),
+                          child: Text(
+                            "Rotating Card\nInitial and end pos:\nx: 45, y: 90",
+                          ),
+                        ),
                       ),
                     ),
                   ),

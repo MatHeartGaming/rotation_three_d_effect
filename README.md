@@ -19,7 +19,7 @@ A Flutter package inspired by SwiftUI's rotation3DEffect that allows to apply a 
 Add the following line to your pubspec.yaml file:
 ```
 dependencies:
-  rotation_three_d_effect: ^0.2.1
+  rotation_three_d_effect: ^0.3.0
 ```
 
 ## Usage
