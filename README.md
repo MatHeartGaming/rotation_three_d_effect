@@ -57,7 +57,7 @@ DoubleSidedFlipWidget(
   ),
 );
 ```
-![Indefinite Rotatation Effect](https://github.com/MatHeartGaming/readme_images/raw/main/indefinite_3d_rotation.gif)
+![Indefinite Rotatation Effect](https://github.com/MatHeartGaming/readme_images/raw/main/flip_widgets.gif)
 
 ** NEW Indefinite Rotation:
 ```
