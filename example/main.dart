@@ -26,28 +26,24 @@ class MainApp extends StatelessWidget {
                   const SizedBox(
                     height: 20,
                   ),
-                   DoubleSidedFlipWidget(
+                  DoubleSidedFlipWidget(
                     axis: FlipAxis.vertical,
                     enableTap: true,
-                    enableDrag: true,                    
+                    enableDrag: true,
                     flipThreshold: 0.5,
                     perspective: 0.001,
                     front: Container(
-                      padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        color: Colors.amber,
-                        borderRadius: BorderRadius.circular(10)
-                      ),
-                      child: const Text("Front")
-                    ),
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            color: Colors.amber,
+                            borderRadius: BorderRadius.circular(10)),
+                        child: const Text("Front")),
                     back: Container(
-                      padding: const EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        color: Colors.deepPurpleAccent,
-                        borderRadius: BorderRadius.circular(10)
-                      ),
-                      child: const Text("Back")
-                    ),
+                        padding: const EdgeInsets.all(10),
+                        decoration: BoxDecoration(
+                            color: Colors.deepPurpleAccent,
+                            borderRadius: BorderRadius.circular(10)),
+                        child: const Text("Back")),
                   ),
                   IndefiniteRotation3DEffect(
                     rotateY: true,

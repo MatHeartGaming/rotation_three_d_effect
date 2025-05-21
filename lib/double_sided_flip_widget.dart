@@ -112,7 +112,8 @@ class _DoubleSidedFlipWidgetState extends State<DoubleSidedFlipWidget>
         // Choose which side to show
         final isFront = _controller.value <= 0.5;
         // Apply perspective
-        final transform = Matrix4.identity()..setEntry(3, 2, widget.perspective);
+        final transform = Matrix4.identity()
+          ..setEntry(3, 2, widget.perspective);
         // Rotate around chosen axis
         if (widget.axis == FlipAxis.horizontal) {
           transform.rotateY(angle);
@@ -148,29 +149,32 @@ class _DoubleSidedFlipWidgetState extends State<DoubleSidedFlipWidget>
       child = GestureDetector(
         behavior: HitTestBehavior.translucent,
         onTap: widget.enableTap ? _toggleFlip : null,
-        onHorizontalDragUpdate: widget.enableDrag && widget.axis == FlipAxis.horizontal
-            ? (details) {
-                _controller.value = (_controller.value +
-                        details.delta.dx * widget.dragSensitivity)
-                    .clamp(0.0, 1.0);
-              }
-            : null,
-        onVerticalDragUpdate: widget.enableDrag && widget.axis == FlipAxis.vertical
-            ? (details) {
-                _controller.value = (_controller.value -
-                        details.delta.dy * widget.dragSensitivity)
-                    .clamp(0.0, 1.0);
-              }
-            : null,
-        onHorizontalDragEnd: widget.enableDrag && widget.axis == FlipAxis.horizontal
-            ? (details) {
-                if (_controller.value >= widget.flipThreshold) {
-                  _controller.animateTo(1.0);
-                } else {
-                  _controller.animateBack(0.0);
-                }
-              }
-            : null,
+        onHorizontalDragUpdate:
+            widget.enableDrag && widget.axis == FlipAxis.horizontal
+                ? (details) {
+                    _controller.value = (_controller.value +
+                            details.delta.dx * widget.dragSensitivity)
+                        .clamp(0.0, 1.0);
+                  }
+                : null,
+        onVerticalDragUpdate:
+            widget.enableDrag && widget.axis == FlipAxis.vertical
+                ? (details) {
+                    _controller.value = (_controller.value -
+                            details.delta.dy * widget.dragSensitivity)
+                        .clamp(0.0, 1.0);
+                  }
+                : null,
+        onHorizontalDragEnd:
+            widget.enableDrag && widget.axis == FlipAxis.horizontal
+                ? (details) {
+                    if (_controller.value >= widget.flipThreshold) {
+                      _controller.animateTo(1.0);
+                    } else {
+                      _controller.animateBack(0.0);
+                    }
+                  }
+                : null,
         onVerticalDragEnd: widget.enableDrag && widget.axis == FlipAxis.vertical
             ? (details) {
                 if (_controller.value >= widget.flipThreshold) {
