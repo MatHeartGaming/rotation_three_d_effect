@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rotation_three_d_effect/double_sided_flip_widget.dart';
 import 'package:rotation_three_d_effect/indefinite_rotation_three_d_effect.dart';
 import 'package:rotation_three_d_effect/rotation_three_d_effect.dart';
 
@@ -24,6 +25,29 @@ class MainApp extends StatelessWidget {
                 children: [
                   const SizedBox(
                     height: 20,
+                  ),
+                   DoubleSidedFlipWidget(
+                    axis: FlipAxis.vertical,
+                    enableTap: true,
+                    enableDrag: true,                    
+                    flipThreshold: 0.5,
+                    perspective: 0.001,
+                    front: Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Colors.amber,
+                        borderRadius: BorderRadius.circular(10)
+                      ),
+                      child: const Text("Front")
+                    ),
+                    back: Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Colors.deepPurpleAccent,
+                        borderRadius: BorderRadius.circular(10)
+                      ),
+                      child: const Text("Back")
+                    ),
                   ),
                   IndefiniteRotation3DEffect(
                     rotateY: true,

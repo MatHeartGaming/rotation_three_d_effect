@@ -19,7 +19,7 @@ A Flutter package inspired by SwiftUI's rotation3DEffect that allows to apply a 
 Add the following line to your pubspec.yaml file:
 ```
 dependencies:
-  rotation_three_d_effect: ^0.3.2
+  rotation_three_d_effect: ^0.4.0
 ```
 
 ## Usage
@@ -30,6 +30,34 @@ import 'package:rotation_three_d_effect/rotation_three_d_effect.dart';
 ```
 
 2. Apply 3D Rotation Effect:
+
+** NEW DoubleSidedFlipWidget:
+```
+DoubleSidedFlipWidget(
+  axis: FlipAxis.vertical,
+  enableTap: true,
+  enableDrag: true,                    
+  flipThreshold: 0.5,
+  perspective: 0.001,
+  front: Container(
+    padding: const EdgeInsets.all(10),
+    decoration: BoxDecoration(
+      color: Colors.amber,
+      borderRadius: BorderRadius.circular(10)
+    ),
+    child: const Text("Front")
+  ),
+  back: Container(
+    padding: const EdgeInsets.all(10),
+    decoration: BoxDecoration(
+      color: Colors.deepPurpleAccent,
+      borderRadius: BorderRadius.circular(10)
+    ),
+    child: const Text("Back")
+  ),
+);
+```
+![Indefinite Rotatation Effect](https://github.com/MatHeartGaming/readme_images/raw/main/indefinite_3d_rotation.gif)
 
 ** NEW Indefinite Rotation:
 ```

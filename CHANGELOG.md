@@ -1,3 +1,8 @@
+## [0.4.0] - Added DoubleSidedFlipWidget
+* Introduced DoubleSidedFlipWidget: a new widget that allows flipping between two child widgets with a realistic 3D rotation effect.
+* Supports both horizontal (Y-axis) and vertical (X-axis) flipping.
+* Enables interaction through drag and/or tap, with customizable threshold, sensitivity, and perspective.
+
 ## [0.3.2] - Added possibility to easily stop auto rotation when the user interacts
 * By using the stopRotationOnUserInteraction parameter you can easily decide to stop the autoroation on user interaction.
 
