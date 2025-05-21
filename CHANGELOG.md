@@ -1,3 +1,6 @@
+## [0.3.2] - Added possibility to easily stop auto rotation when the user interacts
+* By using the stopRotationOnUserInteraction parameter you can easily decide to stop the autoroation on user interaction.
+
 ## [0.3.1] - Added IndefiniteRotation3DEffect to allow for Infinite widget rotations!
 * Readme update
 * It is now possible to make any widget to roate indefinetly

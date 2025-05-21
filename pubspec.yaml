@@ -1,6 +1,6 @@
 name: rotation_three_d_effect
 description: "A Flutter package inspired by SwiftUI's rotation3DEffect that allows to apply a Three Dimensional rotation to any Widget."
-version: 0.3.1
+version: 0.3.2
 homepage: "https://github.com/MatHeartGaming/rotation_three_d_effect"
 
 environment:

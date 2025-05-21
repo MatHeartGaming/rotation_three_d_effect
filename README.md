@@ -19,7 +19,7 @@ A Flutter package inspired by SwiftUI's rotation3DEffect that allows to apply a 
 Add the following line to your pubspec.yaml file:
 ```
 dependencies:
-  rotation_three_d_effect: ^0.3.1
+  rotation_three_d_effect: ^0.3.2
 ```
 
 ## Usage
@@ -38,6 +38,7 @@ IndefiniteRotation3DEffect(
   rotateX: false,
   rotationCount: 10,
   allowUserRotation: true,
+  stopRotationOnUserInteraction: false,
   rotationDuration: const Duration(seconds: 5),
   child: FilledButton.tonal(
     onPressed: () {},

@@ -25,6 +25,9 @@ class IndefiniteRotation3DEffect extends StatefulWidget {
   /// If true, user can pan to rotate the widget.
   final bool allowUserRotation;
 
+  /// If true, it will stop rotating when the user interacts.
+  final bool stopRotationOnUserInteraction;
+
   /// Multiplier controlling how sensitive user drag is (radians per pixel).
   final double gestureSensitivity;
 
@@ -37,12 +40,11 @@ class IndefiniteRotation3DEffect extends StatefulWidget {
     this.rotateY = false,
     this.rotationDuration = const Duration(seconds: 5),
     this.allowUserRotation = true,
+    this.stopRotationOnUserInteraction = false,
     this.gestureSensitivity = 0.01,
   })  : assert(rotateX || rotateY, 'At least one axis must be true.'),
-        assert(
-          rotationCount == null || rotationCount > 0,
-          'rotationCount must be greater than zero.',
-        );
+        assert(rotationCount == null || rotationCount > 0,
+            'rotationCount must be greater than zero.');
 
   @override
   State<IndefiniteRotation3DEffect> createState() =>
@@ -144,7 +146,7 @@ class _IndefiniteRotation3DEffectState extends State<IndefiniteRotation3DEffect>
   Matrix4 _buildTransform(double autoAngle) {
     final matrix = Matrix4.identity()..setEntry(3, 2, 0.003);
     // Compute the auto-rotate contribution (finite or infinite)
-    final double autoContribution = widget.rotationCount != null
+    final autoContribution = widget.rotationCount != null
         ? (_completedRotations + _controller.value) * 2 * pi
         : autoAngle;
 
@@ -176,6 +178,7 @@ class _IndefiniteRotation3DEffectState extends State<IndefiniteRotation3DEffect>
     if (widget.allowUserRotation) {
       rotated = GestureDetector(
         onPanDown: (_) {
+          // Always stop controller to allow manual rotation
           if (widget.autoRotate || widget.rotationCount != null) {
             _controller.stop();
           }
@@ -187,15 +190,15 @@ class _IndefiniteRotation3DEffectState extends State<IndefiniteRotation3DEffect>
           });
         },
         onPanEnd: (_) {
-          if (widget.autoRotate || widget.rotationCount != null) {
+          // Resume only if stopRotationOnUserInteraction is false
+          if (!widget.stopRotationOnUserInteraction) {
             if (widget.rotationCount != null) {
               final remaining = widget.rotationCount! - _completedRotations;
               if (remaining > 0) {
                 _controller.forward(from: _controller.value);
               }
-            } else {
-              final remaining = widget.rotationCount! - _completedRotations;
-              _controller.repeat(count: remaining);
+            } else if (widget.autoRotate) {
+              _controller.repeat();
             }
           }
         },
